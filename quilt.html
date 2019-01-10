@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+	<html>
+
+		<head>
+			<title>Unbound Thread</title>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<link rel="stylesheet" href="unbound.css"> 
+		</head>
+
+		<body>
+			<div id="wrapper">
+				
+				<div id="tophead">
+				<h1>Unbound Thread</h1>
+				</div>
+				<div class="topnav">
+					<a href="index.html"> Main </a>
+					<a href="Article.html"> Articles </a>	
+					<a href="tutorials.html"> Tutorials </a>	
+					<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i class="fa fa-bars"></i>
+					</a>
+				</div>
+			
+				<div class="main">
+					<h2> Modern quilts</h2>
+					<p>Check out a modern twist on these quilts!</p>
+					
+						<div class="slideshow-container">
+
+						<div class="mySlides fade">
+						  <div class="numbertext">1 / 3</div>
+						  <img src="img/modquilt1.jpg" style="width:100%">
+						  <div class="text">Blue gradient quilt</div>
+						</div>
+
+						<div class="mySlides fade">
+						  <div class="numbertext">2 / 3</div>
+						  <img src="img/modquilt2.jpg" style="width:100%">
+						  <div class="text">Black and white modern quilt</div>
+						</div>
+
+						<div class="mySlides fade">
+						  <div class="numbertext">3 / 3</div>
+						  <img src="img/modquilt3.jpg" style="width:100%">
+						  <div class="text">Geometric circle quilt</div>
+						</div>
+
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+						</div>
+						<br>
+
+						<div style="text-align:center">
+						  <span class="dot" onclick="currentSlide(1)"></span> 
+						  <span class="dot" onclick="currentSlide(2)"></span> 
+						  <span class="dot" onclick="currentSlide(3)"></span> 
+						</div>
+
+						<script>
+						var slideIndex = 1;
+						showSlides(slideIndex);
+
+						function plusSlides(n) {
+						  showSlides(slideIndex += n);
+						}
+
+						function currentSlide(n) {
+						  showSlides(slideIndex = n);
+						}
+
+						function showSlides(n) {
+						  var i;
+						  var slides = document.getElementsByClassName("mySlides");
+						  var dots = document.getElementsByClassName("dot");
+						  if (n > slides.length) {slideIndex = 1}    
+						  if (n < 1) {slideIndex = slides.length}
+						  for (i = 0; i < slides.length; i++) {
+							  slides[i].style.display = "none";  
+						  }
+						  for (i = 0; i < dots.length; i++) {
+							  dots[i].className = dots[i].className.replace(" active", "");
+						  }
+						  slides[slideIndex-1].style.display = "block";  
+						  dots[slideIndex-1].className += " active";
+						}
+						</script>
+				</div>
+			
+				<div class="side">
+					<h5>Search Bar</h5>
+					<input type="text" placeholder="Search..">
+					<br>
+					<br>
+					<h5>What we are about</h5>
+					<p>Unbound Thread is dedicated to bringing you content about the most current news and artists making their mark in the
+					textile world.</p>
+					<p>Whether it is sewing, knitting, weaving, or any other textile art, we strive to provide exposure and resources for fiber artists online.</p>
+					<br>
+					<form action="/action_page.php">
+					<h3>Contact us!</h3>
+						<p> Have any questions or concerns? Want to collab with us? Send us a message and we'll get back to you!</p>
+						<br>
+						First name:<br>
+						<input type="text" value="First">
+						<br>
+						<br>
+						Last name:<br>
+						<input type="text" name="lastname" value="Last">
+						<br>
+						<br>
+						E-mail:<br>
+						<input type="text" name="email" value="Email">
+						<br>
+						<br>
+						Message:<br>
+						<textarea name=message rows="5" cols="40" maxlength="2560">Leave us a message here!</textarea>
+						<br><br>
+						<input type="submit" value="Submit">
+					</form> 
+				</div>
+			
+				<footer>
+					<Nav>
+						<ul>
+							<li><a href="index.html"> Main </a></li>		
+							<li><a href="Article.html"> Articles </a></li>
+							<li><a href="tutorials.html"> Tutorials </a></li>		
+						</ul>
+					</nav>
+					
+					<p><i>&copy 2018 Unbound Thread</i></P>
+				</footer>
+		
+			</div>
+		</body>
+	
+	</html>
